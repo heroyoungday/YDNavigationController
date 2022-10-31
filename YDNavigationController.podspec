@@ -30,13 +30,26 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '11.0'
 
-  s.source_files = 'YDNavigationController/Classes/**/*'
+#  s.source_files = 'YDNavigationController/Classes/**/*'
+  s.default_subspec = "File"
   
+  s.subspec "File" do |ss|
+    ss.source_files = 'YDNavigationController/Classes/**/*'
+    ss.dependency 'YDNavigationController/Resources'
+  end
+  # 资源依赖
+  s.subspec "Resources" do |ss|
+    ss.resource_bundles = {
+      'YDNavigationController' => ['YDNavigationController/Assets/Images.xcassets']
+    }
+  end
   # s.resource_bundles = {
   #   'YDNavigationController' => ['YDNavigationController/Assets/*.png']
   # }
 
+  s.dependency 'SnapKit'
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  
 end

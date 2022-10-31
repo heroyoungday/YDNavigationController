@@ -3,20 +3,44 @@
   "version": "0.1.0",
   "summary": "A short description of YDNavigationController.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/jsonehero/YDNavigationController",
+  "homepage": "https://github.com/heroyoungday/YDNavigationController",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "jsonehero": "huangyongdong@vv.cn"
+    "jsone": "heroyoungday@gmail.com"
   },
   "source": {
-    "git": "https://github.com/jsonehero/YDNavigationController.git",
+    "git": "https://github.com/heroyoungday/YDNavigationController.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "10.0"
+    "ios": "11.0"
   },
-  "source_files": "YDNavigationController/Classes/**/*"
+  "default_subspecs": "File",
+  "dependencies": {
+    "SnapKit": [
+
+    ]
+  },
+  "subspecs": [
+    {
+      "name": "File",
+      "source_files": "YDNavigationController/Classes/**/*",
+      "dependencies": {
+        "YDNavigationController/Resources": [
+
+        ]
+      }
+    },
+    {
+      "name": "Resources",
+      "resource_bundles": {
+        "YDNavigationController": [
+          "YDNavigationController/Assets/Images.xcassets"
+        ]
+      }
+    }
+  ]
 }

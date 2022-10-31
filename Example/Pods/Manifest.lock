@@ -16,7 +16,15 @@ PODS:
     - iOSSnapshotTestCase (~> 8.0)
     - Nimble
   - Quick (2.2.1)
-  - YDNavigationController (0.1.0)
+  - SnapKit (5.6.0)
+  - YDNavigationController (0.1.0):
+    - SnapKit
+    - YDNavigationController/File (= 0.1.0)
+  - YDNavigationController/File (0.1.0):
+    - SnapKit
+    - YDNavigationController/Resources
+  - YDNavigationController/Resources (0.1.0):
+    - SnapKit
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
@@ -32,6 +40,7 @@ SPEC REPOS:
     - Nimble
     - Nimble-Snapshots
     - Quick
+    - SnapKit
 
 EXTERNAL SOURCES:
   YDNavigationController:
@@ -43,8 +52,9 @@ SPEC CHECKSUMS:
   Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
   Nimble-Snapshots: ef281b908c604f78c8313587e25ea92c8ab513d7
   Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
-  YDNavigationController: ad404b8fbddb5c1bb25e0d407860191a12b0aa6c
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  YDNavigationController: 59b3ad37bc7283785634959e96ab3cfc73b61257
 
-PODFILE CHECKSUM: aab974e18e4305110f4d80610f10ee4a9a0e7a90
+PODFILE CHECKSUM: b126ddac3cfb76fd69700ad046566e55185ead56
 
 COCOAPODS: 1.11.3
